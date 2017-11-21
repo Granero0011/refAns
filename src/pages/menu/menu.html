@@ -1,0 +1,34 @@
+<!--
+  Generated template for the MenuPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-buttons start>
+     <button ion-button item-only menuToggle>
+       <ion-icon name="menu"></ion-icon>
+     </button>
+   </ion-buttons>
+    <ion-title>menu</ion-title>
+    <ion-buttons end>
+  <ion-icon name="settings"></ion-icon>
+</ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <h1>RefAns</h1>
+  <div text-center>Discover</div>
+  <ion-searchbar (ionInput)="getItems($event)"></ion-searchbar>
+<ion-list>
+  <ion-item *ngFor="let drug of drugList">
+    <h2> {{ drug.name }} </h2>
+    <h3> subspecialty: <strong>{{ drug.subspecialty }}</strong> </h3>
+  </ion-item>
+</ion-list>
+</ion-content>
